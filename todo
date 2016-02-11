@@ -1,0 +1,16 @@
+Environment TODO:
+grid generation
+warehouses placement and load items
+send commands to drone
+update each turn
+
+Drone TODO:
+Implement drone
+Implement loading/unloading + weight management
+Pathfinding trough grid
+
+
+Loader TODO:
+Read inputs to generate environment
+Read and parse each command to update environment each turns
+
