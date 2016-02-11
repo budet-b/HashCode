@@ -13,6 +13,7 @@ int product_types_weights[];
 int warehouses = 0;
 int localisation_warehouses[][];
 int product_types_store[][];
+int orders = 0;
 int main(int argc, char* argv[]){
     if(argc < 2){
         errx(2,"Fail to open input");
@@ -62,6 +63,7 @@ int main(int argc, char* argv[]){
                     }
                 }
             }
+            orders = warehousesline[0];
         }
         
     }
