@@ -11,6 +11,7 @@ int k = 0;
 int product_types = 0;
 int product_types_weights[];
 int warehouses = 0;
+int localisation_warehouses[][];
 int main(int argc, char* argv[]){
     if(argc < 2){
         errx(2,"Fail to open input");
@@ -19,8 +20,10 @@ int main(int argc, char* argv[]){
     char maxchar[10000];
     int i = 0;
     char *line = NULL;
+    char *linewarehouses = NULL;
     size_t linecap = 0;
     ssize_t linelen;
+    ssize_t warehousesline;
     while ((linelen = getline(&line, &linecap, input)) > 0){
         k = 0;
         maxchar[i] = linelen;
@@ -47,10 +50,14 @@ int main(int argc, char* argv[]){
         
         i++;
         if (i > 3) {
-        for (int y = 0; y < warehouses; y++) {
-            
+        for (int x = 0; x < warehouses; x++) {
+            for (int y = 0; y < warehouses; y++) {
+            size_t mod = 0;
+            if ((warehousesline = getline(&line, &mod+1, input)) > 0){
+                localisation_warehouses[x,y] = warehousesline[0],warehousesline[1];
+            }
             }
         }
+        }
     }
-
 }
