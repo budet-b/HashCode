@@ -9,6 +9,8 @@ int deadline = 0;
 int maxload = 0;
 int k = 0;
 int product_types = 0;
+int product_types_weights[];
+int warehouses = 0;
 int main(int argc, char* argv[]){
     if(argc < 2){
         errx(2,"Fail to open input");
@@ -24,15 +26,31 @@ int main(int argc, char* argv[]){
         maxchar[i] = linelen;
         if (i == 0) {
             row = maxchar[0];
+            //free(maxchar[0]);
             columns = maxchar[1];
             drones = maxchar[2];
             deadline = maxchar[3];
             maxload = maxchar[4];
         }
         if (i == 1) {
-            
+            product_types = maxchar[0];
         }
+        if (i == 2) {
+            product_types_weights[product_types];
+            for (int p = 0; p < product_types; p++) {
+                product_types_weights[p] = maxchar[p];
+            }
+        }
+        if (i == 3) {
+            warehouses = maxchar[0];
+        }
+        
         i++;
+        if (i > 3) {
+        for (int y = 0; y < warehouses; y++) {
+            
+            }
+        }
     }
 
 }
