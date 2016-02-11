@@ -9,12 +9,18 @@ struct drone {
 
 }
 
-void cmd_Load(int id, char c, int idWarehouse, int idProductType, int numberItems)
+void cmd_Load(int id, int idWarehouse, int idProductType, int numberItems)
 {
     
 }
 
-void cmd_Deliver(int id, char c, int idCustomer, int idProductType, int numberItems)
+void cmd_Unload(int id, int idWarehouse, int idProductType, int numberItems)
 {
 
 }
+void cmd_Deliver(int id, int idCustomer, int idProductType, int numberItems)
+{
+
+}
+
+void cmd_Wait(int id, 
