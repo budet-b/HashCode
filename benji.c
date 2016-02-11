@@ -52,12 +52,12 @@ int main(int argc, char* argv[]){
         if (i > 3) {
         for (int x = 0; x < warehouses; x++) {
             for (int y = 0; y < warehouses; y++) {
-            size_t mod = 0;
-            if ((warehousesline = getline(&line, &mod+1, input)) > 0){
+                size_t mod = 0;
+                if ((warehousesline = getline(&line, &mod+1, input)) > 0){
                 localisation_warehouses[x,y] = warehousesline[0],warehousesline[1];
+                    }
+                }
             }
-            }
-        }
         }
     }
 }
