@@ -14,6 +14,7 @@ int warehouses = 0;
 int localisation_warehouses[][];
 int product_types_store[][];
 int orders = 0;
+
 int main(int argc, char* argv[]){
     if(argc < 2){
         errx(2,"Fail to open input");
@@ -49,7 +50,6 @@ int main(int argc, char* argv[]){
         if (i == 3) {
             warehouses = maxchar[0];
         }
-        
         i++;
         if (i > 3) {
         for (int x = 0; x < warehouses; x++) {
@@ -65,6 +65,5 @@ int main(int argc, char* argv[]){
             }
             orders = warehousesline[0];
         }
-        
     }
 }
