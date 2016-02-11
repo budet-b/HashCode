@@ -12,6 +12,7 @@ int product_types = 0;
 int product_types_weights[];
 int warehouses = 0;
 int localisation_warehouses[][];
+int product_types_store[][];
 int main(int argc, char* argv[]){
     if(argc < 2){
         errx(2,"Fail to open input");
@@ -53,11 +54,15 @@ int main(int argc, char* argv[]){
         for (int x = 0; x < warehouses; x++) {
             for (int y = 0; y < warehouses; y++) {
                 size_t mod = 0;
+                if ((warehousesline = getline(&line, &mod, input))>0) {
+                    product_types_store[x,y] = warehousesline[0],warehousesline[1];
+                }
                 if ((warehousesline = getline(&line, &mod+1, input)) > 0){
                 localisation_warehouses[x,y] = warehousesline[0],warehousesline[1];
                     }
                 }
             }
         }
+        
     }
 }
